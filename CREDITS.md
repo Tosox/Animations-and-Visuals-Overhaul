@@ -100,5 +100,5 @@
 ### Altoids
 * Texture: TosoxDev
 
-### Scripts and Compatibilty
+### Scripts and Compatibility
 * TosoxDev
