@@ -1,9 +1,9 @@
 --[[
 	=====================================================================
 	Addon		: FDDA Animations and Visuals Overhaul
-	Link:		: 
+	Link:		: https://github.com/TosoxDev/FDDA-Animations-and-Visuals-Overhaul
 	Author		: TosoxDev
-	Last Edit	: 18.04.2023
+	Last Edit	: 22.04.2023
 	=====================================================================
 --]]
 
@@ -28,7 +28,6 @@ function actor_on_item_use(obj)
 	local obj_section = obj:section()
 	if obj_section == "survival_kit" then
 		CreateTimeEvent("survival_kit_use", "survival_kit_use", 3.0, function()
-			game.stop_hud_motion()
 			enhanced_animations.used_item = "jgut"
 	    	enhanced_animations.anim_section = ini_eff:r_string_ex(enhanced_animations.used_item, "anm")
 	    	enhanced_animations.anim_prepare()

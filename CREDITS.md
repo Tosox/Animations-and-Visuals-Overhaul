@@ -30,12 +30,24 @@
 * HUD Model: GUNSLINGER Team
 * Texture: GUNSLINGER Team
 
+### Flask
+* Animation: Teivazcz, GUNSLINGER Team
+* Sound: GUNSLINGER Team
+* HUD Model: GUNSLINGER Team
+* Texture: GUNSLINGER Team
+
 ### Tourniquet
 * Animation: Teivazcz, GUNSLINGER Team
 * Sound: GUNSLINGER Team
 * World Model: EFP Team
 * HUD Model: GUNSLINGER Team
 * Texture: GUNSLINGER Team
+
+### Metal Bottle
+* Animation: Apathy_Knight
+* Sound: JadeyMoyaison
+* HUD Model: FIREBREATH1001
+* Texture: TosoxDev
 
 ### Morphine
 * Animation: Skyww
