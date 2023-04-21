@@ -1,0 +1,20 @@
+local defaults = {
+	["enable_ea"] = true,
+	["exo_anims"] = true,
+	["kevlar_anims"] = true
+}
+
+function get_config(key)
+	if ui_mcm then return ui_mcm.get("fdda_avo/" .. key) else return defaults[key] end
+end
+
+function on_mcm_load()
+	return {
+		id = "fdda_avo", sh = true, gr = {
+			{ id = "title", type = "slide", link = "ui_options_slider_mask", text = "ui_mcm_fdda_avo_title", size = { 512, 50 }, spacing = 20 },
+			{ id = "enable_ea", type = "check", val = 1, def = true },
+			{ id = "exo_anims", type = "check", val = 1, def = true },
+			{ id = "kevlar_anims", type = "check", val = 1, def = true }
+		}
+	}
+end

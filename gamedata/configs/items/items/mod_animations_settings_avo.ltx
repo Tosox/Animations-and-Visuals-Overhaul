@@ -1,0 +1,146 @@
+; ============================ FOOD ===============================
+
+[nuts]:tushonka
+anm = item_nuts
+
+[raisins]:tushonka
+anm = item_raisins
+
+[mint]:drug_coagulant
+anm = item_mint
+
+[kolbasa]
+snd = interface\item_usage\old_meat_use
+anm = item_old_meat
+cam = itemuse_anm_effects\eat_tushonka_d_use_h.anm
+tm = 7000
+helm = false
+
+; ============================ DRUGS ==============================
+
+[tobacco]:cigar1
+anm = item_russian_tobacco
+
+[joint]:cigar1
+anm = item_joint
+
+[cigar]:cigar1
+anm = item_cuban_cigar
+
+[hand_rolling_tobacco]:cigar1
+anm = item_handrolled_tobacco
+
+![drug_booster]:!vodka
+anm = item_drug_booster
+snd = interface\item_usage\drug_booster_drink
+cam = itemuse_anm_effects\drug_booster_drink.anm
+tm = 7000
+helm = false
+
+[drug_anabiotic]
+anm = item_drug_anabiotic
+snd = interface\item_usage\drug_anabiotic_drink
+cam = itemuse_anm_effects\drug_anabiotic_drink.anm
+tm = 13500
+helm = false
+
+![morphine]
+anm = item_morphine
+snd = interface\item_usage\morphine_use
+tm = 2500
+
+@[adrenalin]
+snd = interface\item_usage\morphine_use
+anm = item_adrenalin
+cam = itemuse_anm_effects\antirad_use.anm
+tm = 2500
+helm = true
+
+@[tetanus]
+snd = interface\item_usage\syringe_use
+anm = item_tetanus
+cam = itemuse_anm_effects\syringe_use.anm
+tm = 3000
+helm = true
+
+@[analgetic]:tetanus
+
+; ============================ DRINKS =============================
+
+[tea]
+snd = interface\item_usage\vodka_use
+anm = item_beard_tea
+cam = itemuse_anm_effects\vodka_use.anm
+tm = 4300
+helm = false
+
+[drink_crow]
+snd = interface\item_usage\drink_crow_drink
+cam = itemuse_anm_effects\banka_use.anm
+anm = item_drink_crow
+tm = 4000
+helm = false
+
+![mineral_water]
+snd = interface\item_usage\mineral_water_drink
+anm = item_mineral_water
+cam = itemuse_anm_effects\mineral_water_drink.anm
+tm = 7250
+helm = false
+
+![water_drink]
+snd = interface\item_usage\water_drink_drink
+anm = item_water_drink
+cam = itemuse_anm_effects\water_drink_drink.anm
+tm = 6000
+helm = false
+
+; ============================ MEDICAL ============================
+
+[survival_kit]:medkit
+anm = item_survival_kit
+
+[jgut]
+snd = interface\item_usage\jgut_use
+anm = item_jgut
+cam = itemuse_anm_effects\jgut_use.anm
+tm = 4000
+helm = true
+
+![medkit]
+tm = 5000
+
+; =========================== EXO =================================
+
+[medkit_exo]
+snd = interface\item_usage\medkit_exo_use
+anm = item_medkit_exo
+cam = itemuse_anm_effects\medkit_exo_use.anm
+tm = 2400
+helm = true
+
+[medkit_army_exo]:medkit_exo
+anm = item_medkit_army_exo
+
+[medkit_scientic_exo]:medkit_exo
+anm = item_medkit_scientific_exo
+
+[antirad_exo]:medkit_exo
+anm = item_antirad_exo
+snd = interface\item_usage\antirad_exo_use
+
+; ============================ PLATES ============================
+
+[af_kevlar]
+snd = interface\item_usage\plate_insert
+anm = item_af_kevlar
+cam = itemuse_anm_effects\plate_insert.anm
+tm = 3000
+helm = true
+
+[af_kevlar_up]:af_kevlar
+
+[af_plates]:af_kevlar
+anm = item_af_plates
+
+[af_plates_up]:af_plates

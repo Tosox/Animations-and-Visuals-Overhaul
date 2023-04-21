@@ -1,0 +1,69 @@
+--[[
+	=====================================================================
+	Addon		: FDDA Animations and Visuals Overhaul
+	Link:		: 
+	Author		: TosoxDev
+	Last Edit	: 18.04.2023
+	=====================================================================
+--]]
+
+local ini_eff = ini_file("items\\items\\animations_settings.ltx")
+local enable_ea = true
+local kevlar_anims = true
+
+local is_inserting_kevlar = false
+
+function on_option_change()
+	enable_ea = avo_enhanced_animations_mcm.get_config("enable_ea")
+	kevlar_anims = avo_enhanced_animations_mcm.get_config("kevlar_anims")
+end
+
+function actor_on_first_update()
+	on_option_change()
+end
+
+function actor_on_item_use(obj)
+	if not enable_ea then return end
+
+	local obj_section = obj:section()
+	if obj_section == "survival_kit" then
+		CreateTimeEvent("survival_kit_use", "survival_kit_use", 3.0, function()
+			game.stop_hud_motion()
+			enhanced_animations.used_item = "jgut"
+	    	enhanced_animations.anim_section = ini_eff:r_string_ex(enhanced_animations.used_item, "anm")
+	    	enhanced_animations.anim_prepare()
+			return true
+		end)
+	end
+end
+
+function actor_item_to_belt(obj)
+	if not kevlar_anims then return end
+
+	local obj_section = obj:section()
+	if not ini_eff:r_string_ex(obj_section, "snd") then return end
+
+	is_inserting_kevlar = true
+
+	hide_hud_inventory()
+	enhanced_animations.used_item = obj_section
+	enhanced_animations.anim_section = ini_eff:r_string_ex(obj_section, "anm")
+	enhanced_animations.anim_prepare()
+
+	local delay = ini_eff:r_float_ex(obj_section, "tm") * 0.001
+    CreateTimeEvent("restore_kevlar_anim", "restore_kevlar_anim", delay, function()
+        is_inserting_kevlar = false
+        return true
+    end)
+end
+
+function get_is_inserting_kevlar()
+    return is_inserting_kevlar
+end
+
+function on_game_start()
+	RegisterScriptCallback("actor_on_item_use", actor_on_item_use)
+	RegisterScriptCallback("on_option_change", on_option_change)
+	RegisterScriptCallback("actor_on_first_update", actor_on_first_update)
+	RegisterScriptCallback("actor_item_to_belt", actor_item_to_belt)
+end

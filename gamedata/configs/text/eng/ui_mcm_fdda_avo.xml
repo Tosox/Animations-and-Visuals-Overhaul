@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="ui_mcm_menu_fdda_avo">
+		<text>FDDA AVO</text>
+	</string>
+	<string id="ui_mcm_fdda_avo_title">
+		<text>FDDA Animations and Visuals Overhaul</text>
+	</string>
+	<string id="ui_mcm_fdda_avo_enable_ea">
+		<text>Enable enhanced animations</text>
+	</string>
+	<string id="ui_mcm_fdda_avo_enable_ea_desc">
+		<text>Enables playing more than one animation when using an item</text>
+	</string>
+	<string id="ui_mcm_fdda_avo_exo_anims">
+		<text>Enable exo animations</text>
+	</string>
+	<string id="ui_mcm_fdda_avo_exo_anims_desc">
+		<text>Enables exo animations for medkits and antirads</text>
+	</string>
+	<string id="ui_mcm_fdda_avo_kevlar_anims">
+		<text>Enable kevlar animations</text>
+	</string>
+	<string id="ui_mcm_fdda_avo_kevlar_anims_desc">
+		<text>Enables animations for kevlar plates</text>
+	</string>
+</string_table>
