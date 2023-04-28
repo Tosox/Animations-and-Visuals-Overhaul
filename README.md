@@ -27,9 +27,9 @@ It was programmed with maximum compatability with other addons in mind.
 * Raisins
 * Survival Kit
 * Cuban Cigar
-* Handrolled Tobacco
+* Hand Rolling Tobacco
 * Russian Tobacco
-* Joint
+* Cannabis Joint
 * Pack of old Meat
 * Altoids
 * Exoskeleton Outfit
@@ -39,11 +39,12 @@ It was programmed with maximum compatability with other addons in mind.
 * Hercules
 * Mineral Water
 * Sparkling Water
-* Water Flask
+* Purified Water
 * Metal Bottle
 * Morphine
 * Adrenalin
-* Tetanus
+* Tetanus Vaccine
+* Diclofenac Sodium
 
 ### Other Changes
 * Added MCM menu

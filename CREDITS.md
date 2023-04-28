@@ -97,14 +97,14 @@
 ### Cuban Cigar
 * Texture: Warhawk022
 
-### Handrolled Tobacco
+### Hand Rolling Tobacco
 * Texture: Warhawk022
 
 ### Russian Tobacco
 * Texture: Warhawk022
 
-### Joint
-* Texture: Warhawk022
+### Cannabis Joint
+* Texture: Bongwatter
 
 ### Pack of old Meat
 * Texture: TosoxDev
