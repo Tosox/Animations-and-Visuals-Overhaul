@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <string_table>
 	<string id="ui_mcm_menu_fdda_avo">
-		<text>FDDA AVO</text>
+		<text>AVO</text>
 	</string>
 	<string id="ui_mcm_fdda_avo_title">
-		<text>FDDA Animations and Visuals Overhaul</text>
+		<text>Animations and Visuals Overhaul</text>
 	</string>
-	<string id="ui_mcm_fdda_avo_enable_ea">
+	<string id="ui_mcm_avo_enable_ea">
 		<text>Включить улучшенную анимацию</text>
 	</string>
-	<string id="ui_mcm_fdda_avo_enable_ea_desc">
+	<string id="ui_mcm_avo_enable_ea_desc">
 		<text>Включает воспроизведение более одной анимации при использовании предмета</text>
 	</string>
-	<string id="ui_mcm_fdda_avo_exo_anims">
+	<string id="ui_mcm_avo_exo_anims">
 		<text>Включить анимация экзо-скелета</text>
 	</string>
-	<string id="ui_mcm_fdda_avo_exo_anims_desc">
+	<string id="ui_mcm_avo_exo_anims_desc">
 		<text>Включает экзо-анимацию для аптечек и антирадов</text>
 	</string>
-	<string id="ui_mcm_fdda_avo_kevlar_anims">
+	<string id="ui_mcm_avo_kevlar_anims">
 		<text>Включить анимацию кевлара</text>
 	</string>
-	<string id="ui_mcm_fdda_avo_kevlar_anims_desc">
+	<string id="ui_mcm_avo_kevlar_anims_desc">
 		<text>Включить анимацию для кевларовых пластин</text>
 	</string>
 </string_table>
