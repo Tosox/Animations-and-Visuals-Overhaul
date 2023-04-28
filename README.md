@@ -40,7 +40,7 @@
 
 ## TODO
 
-[ ] Ask authors for permission
+- [ ] Ask authors for permission
 
 ## Sources
 
