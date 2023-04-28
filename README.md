@@ -8,12 +8,12 @@ It was programmed with maximum compatability with other addons in mind.
 ## Installation
 * Install the Modded Exes. You can get them from [here](https://github.com/themrdemonized/STALKER-Anomaly-modded-exes).
 * Disable/Uninstall the following addons:
-* * [FDDA Complements and More - NotSoTalented](https://www.moddb.com/mods/stalker-anomaly/addons/fdda-complements-and-more)
-* * [GUNSLINGER Item Animations - Teivazcz](https://www.moddb.com/mods/stalker-anomaly/addons/gunslinger-item-animations)
-* * [Animation of Ballistic Plates - Skyww](https://www.moddb.com/mods/stalker-anomaly/addons/animation-of-ballistic-plates)
-* * [Syringe and Morphine Animation - Skyww](https://www.moddb.com/mods/stalker-anomaly/addons/syringe-and-morphine-animation)
-* * [Water Flask Rework - Apathy_Knight](https://www.moddb.com/mods/stalker-anomaly/addons/water-flask-rework)
-* Install Animations and Visuals Overhaul preferably with [Mod Organizer](https://github.com/ModOrganizer2/modorganizer)
+  * [FDDA Complements and More - NotSoTalented](https://www.moddb.com/mods/stalker-anomaly/addons/fdda-complements-and-more)
+  * [GUNSLINGER Item Animations - Teivazcz](https://www.moddb.com/mods/stalker-anomaly/addons/gunslinger-item-animations)
+  * [Animation of Ballistic Plates - Skyww](https://www.moddb.com/mods/stalker-anomaly/addons/animation-of-ballistic-plates)
+  * [Syringe and Morphine Animation - Skyww](https://www.moddb.com/mods/stalker-anomaly/addons/syringe-and-morphine-animation)
+  * [Water Flask Rework - Apathy_Knight](https://www.moddb.com/mods/stalker-anomaly/addons/water-flask-rework)
+* Install "Animations and Visuals Overhaul" preferably with [Mod Organizer](https://github.com/ModOrganizer2/modorganizer)
 * Open the game and enjoy!
 
 ## Changes
