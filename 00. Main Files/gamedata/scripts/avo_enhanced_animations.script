@@ -12,6 +12,7 @@ local enable_ea = true
 local kevlar_anims = true
 
 local is_inserting_kevlar = false
+local allow_inserting_kevlar = false
 
 function on_option_change()
 	enable_ea = avo_enhanced_animations_mcm.get_config("enable_ea")
@@ -20,6 +21,10 @@ end
 
 function actor_on_first_update()
 	on_option_change()
+	CreateTimeEvent("allow_kevlar_anim", "allow_kevlar_anim", 1.0, function()
+		allow_inserting_kevlar = true
+		return true
+	end)
 end
 
 function actor_on_item_use(obj)
@@ -38,6 +43,7 @@ end
 
 function actor_item_to_belt(obj)
 	if not kevlar_anims then return end
+	if not allow_inserting_kevlar then return end
 
 	local obj_section = obj:section()
 	if not ini_eff:r_string_ex(obj_section, "snd") then return end
