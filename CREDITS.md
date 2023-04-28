@@ -106,7 +106,7 @@
 ### Joint
 * Texture: Warhawk022
 
-### Pack of Old Meat
+### Pack of old Meat
 * Texture: TosoxDev
 
 ### Altoids
