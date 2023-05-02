@@ -22,7 +22,6 @@
 * Animation: Teivazcz, GUNSLINGER Team
 * Sound: GUNSLINGER Team
 * HUD Model: GUNSLINGER Team
-* Texture: GUNSLINGER Team
 
 ### Exo Animations
 * Animation: Teivazcz, GUNSLINGER Team
@@ -41,13 +40,11 @@
 * Sound: GUNSLINGER Team
 * World Model: EFP Team
 * HUD Model: GUNSLINGER Team
-* Texture: GUNSLINGER Team
 
 ### Metal Bottle
 * Animation: Apathy_Knight
 * Sound: JadeyMoyaison
 * HUD Model: FIREBREATH1001
-* Texture: TosoxDev
 
 ### Morphine
 * Animation: Skyww
@@ -102,15 +99,3 @@
 
 ### Russian Tobacco
 * Texture: Warhawk022
-
-### Cannabis Joint
-* Texture: Bongwatter
-
-### Pack of old Meat
-* Texture: TosoxDev
-
-### Altoids
-* Texture: TosoxDev
-
-### Scripts and Compatibility
-* TosoxDev
