@@ -21,31 +21,31 @@ It was programmed with maximum compatability with other addons in mind.
 
 ### Added Animations for...
 * Tourniquet
-* Anabiotics
-* The Beak
-* Beard's Tea
-* Mixed Nuts
-* Raisins
 * Survival Kit
+* Anabiotics
 * Cuban Cigar
 * Hand Rolling Tobacco
 * Russian Tobacco
 * Cannabis Joint
-* Pack of old Meat
+* The Beak
+* Beard's Tea
+* Mixed Nuts
+* Raisins
 * Altoids
+* Pack of old Meat
 * Exoskeleton Outfit
 * Ballistic Plates
 
 ### Modified Animations for...
 * Hercules
-* Mineral Water
-* Sparkling Water
-* Purified Water
-* Metal Bottle
 * Morphine
 * Adrenalin
 * Tetanus Vaccine
 * Diclofenac Sodium
+* Mineral Water
+* Sparkling Water
+* Purified Water
+* Metal Bottle
 
 ### Other Changes
 * Fixed Tourniquet world model
