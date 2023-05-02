@@ -55,10 +55,10 @@ It was programmed with maximum compatability with other addons in mind.
 ## TODO
 
 - [x] Edit texture for "Sparkling Water"
-- [x] Add animation for "Chlortetracycline"
+- [x] Modify animation for "Chlortetracycline"
+- [x] Edit texture for "Beard's Tea"
 - [ ] Ask authors for permission
 - [ ] Fix busyhands bug for "Survival Kit"
-- [ ] Edit texture for "Beard's Tea"
 - [ ] Check more world models
 - [ ] Edit animation times
 
