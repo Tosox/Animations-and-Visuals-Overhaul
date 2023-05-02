@@ -49,6 +49,7 @@ It was programmed with maximum compatability with other addons in mind.
 
 ### Other Changes
 * Fixed Tourniquet world model
+* Fixed animations times
 
 ## TODO
 
