@@ -57,6 +57,7 @@ It was programmed with maximum compatability with other addons in mind.
 - [x] Edit texture for "Sparkling Water"
 - [x] Modify animation for "Chlortetracycline"
 - [x] Edit texture for "Beard's Tea"
+- [ ] Fix camera anim for "The Beak"
 - [ ] Ask authors for permission
 - [ ] Fix busyhands bug for "Survival Kit"
 - [ ] Check more world models
