@@ -12,7 +12,6 @@ It was programmed with maximum compatability with other addons in mind.
 * Disable/Uninstall the following addons:
   * [FDDA Complements and More - NotSoTalented](https://www.moddb.com/mods/stalker-anomaly/addons/fdda-complements-and-more)
   * [GUNSLINGER Item Animations - Teivazcz](https://www.moddb.com/mods/stalker-anomaly/addons/gunslinger-item-animations)
-  * [Animation of Ballistic Plates - Skyww](https://www.moddb.com/mods/stalker-anomaly/addons/animation-of-ballistic-plates)
   * [Syringe and Morphine Animation - Skyww](https://www.moddb.com/mods/stalker-anomaly/addons/syringe-and-morphine-animation)
   * [Water Flask Rework - Apathy_Knight](https://www.moddb.com/mods/stalker-anomaly/addons/water-flask-rework)
 * Optional: [Cr3pis Icon Pack](https://www.moddb.com/mods/stalker-anomaly/addons/cr3pis-icon-pack)
@@ -34,7 +33,6 @@ It was programmed with maximum compatability with other addons in mind.
 * Altoids
 * Pack of old Meat
 * Exoskeleton Outfit
-* Ballistic Plates
 
 ### Modified Animations for...
 * Hercules
@@ -57,6 +55,7 @@ It was programmed with maximum compatability with other addons in mind.
 - [x] Edit texture for "Sparkling Water"
 - [x] Modify animation for "Chlortetracycline"
 - [x] Edit texture for "Beard's Tea"
+- [x] Remove kevlar animations
 - [ ] Fix camera anim for "The Beak"
 - [ ] Ask authors for permission
 - [ ] Fix busyhands bug for "Survival Kit"
@@ -68,7 +67,6 @@ It was programmed with maximum compatability with other addons in mind.
 * [Food, Drug and Drinks Animations - Feel_Fried](https://www.moddb.com/mods/stalker-anomaly/addons/food-drug-and-drinks-animations-reuploaded)
 * [FDDA Complements and More - NotSoTalented](https://www.moddb.com/mods/stalker-anomaly/addons/fdda-complements-and-more)
 * [GUNSLINGER Item Animations - Teivazcz](https://www.moddb.com/mods/stalker-anomaly/addons/gunslinger-item-animations)
-* [Animation of Ballistic Plates - Skyww](https://www.moddb.com/mods/stalker-anomaly/addons/animation-of-ballistic-plates)
 * [Syringe and Morphine Animation - Skyww](https://www.moddb.com/mods/stalker-anomaly/addons/syringe-and-morphine-animation)
 * [Water Flask Rework - Apathy_Knight](https://www.moddb.com/mods/stalker-anomaly/addons/water-flask-rework)
 * [New Coffee DLTX - sticknou](https://www.moddb.com/mods/stalker-anomaly/addons/new-coffee-dltx)
