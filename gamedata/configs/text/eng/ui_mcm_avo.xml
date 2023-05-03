@@ -18,10 +18,4 @@
 	<string id="ui_mcm_avo_exo_anims_desc">
 		<text>Enables exo animations for medkits and antirads</text>
 	</string>
-	<string id="ui_mcm_avo_kevlar_anims">
-		<text>Enable kevlar animations</text>
-	</string>
-	<string id="ui_mcm_avo_kevlar_anims_desc">
-		<text>Enables animations for kevlar plates</text>
-	</string>
 </string_table>

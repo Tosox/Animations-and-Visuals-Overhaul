@@ -18,10 +18,4 @@
 	<string id="ui_mcm_avo_exo_anims_desc">
 		<text>¬ключает экзо-анимацию дл€ аптечек и антирадов</text>
 	</string>
-	<string id="ui_mcm_avo_kevlar_anims">
-		<text>¬ключить анимацию кевлара</text>
-	</string>
-	<string id="ui_mcm_avo_kevlar_anims_desc">
-		<text>¬ключить анимацию дл€ кевларовых пластин</text>
-	</string>
 </string_table>

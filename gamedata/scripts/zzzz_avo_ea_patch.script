@@ -1,6 +1,5 @@
 local orig_backpack_close = zzz_ea_addon_backpack.backpack_close
 function zzz_ea_addon_backpack.backpack_close()
     if aaa_avo_ea_patch.get_is_playing_exo() then return end
-    if avo_enhanced_animations.get_is_inserting_kevlar() then return end
     orig_backpack_close()
 end
