@@ -64,12 +64,6 @@
 * HUD Model: Skyww
 * Texture: Skyww
 
-### Ballistic Plates
-* Animation: Skyww
-* Sound: Skyww
-* HUD Model: Skyww
-* Texture: Skyww
-
 ### The Beak
 * Animation: TheParaziT
 * Sound: sticknou
