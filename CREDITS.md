@@ -38,7 +38,6 @@
 ### Tourniquet
 * Animation: Teivazcz, GUNSLINGER Team
 * Sound: GUNSLINGER Team
-* World Model: EFP Team
 * HUD Model: GUNSLINGER Team
 
 ### Metal Bottle
