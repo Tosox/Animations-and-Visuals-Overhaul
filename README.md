@@ -47,20 +47,13 @@ It was programmed with maximum compatability with other addons in mind.
 * Metal Bottle
 
 ### Other Changes
-* Fixed Tourniquet world model
 * Fixed animations times
 
 ## TODO
 
-- [x] Edit texture for "Sparkling Water"
-- [x] Modify animation for "Chlortetracycline"
-- [x] Edit texture for "Beard's Tea"
-- [x] Remove kevlar animations
-- [ ] Fix camera anim for "The Beak"
 - [ ] Ask authors for permission
+- [ ] Fix camera anim for "The Beak"
 - [ ] Fix busyhands bug for "Survival Kit"
-- [ ] Check more world models
-- [ ] Edit animation times
 
 ## Sources
 
@@ -70,4 +63,3 @@ It was programmed with maximum compatability with other addons in mind.
 * [Syringe and Morphine Animation - Skyww](https://www.moddb.com/mods/stalker-anomaly/addons/syringe-and-morphine-animation)
 * [Water Flask Rework - Apathy_Knight](https://www.moddb.com/mods/stalker-anomaly/addons/water-flask-rework)
 * [New Coffee DLTX - sticknou](https://www.moddb.com/mods/stalker-anomaly/addons/new-coffee-dltx)
-* [EFP Modpack](https://discord.com/servers/escape-from-pripyat-833709559067443230)
