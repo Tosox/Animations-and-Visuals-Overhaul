@@ -22,8 +22,6 @@ uniform half3		eye_normal;
 uniform	half4 		dt_params;
 
 //GUNSLINGER**************************//
-uniform	half4 		m_hud_params;
-uniform	half4		screen_res;
 uniform	half4		m_zoom_deviation;
 uniform	float4 		m_actor_params;
 uniform	float4 		m_affects;
