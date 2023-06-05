@@ -2,13 +2,14 @@
     =====================================================================
     Addon        : Animations and Visuals Overhaul
     Link:        : https://github.com/TosoxDev/Animations-and-Visuals-Overhaul
-    Author        : TosoxDev
-    Last Edit    : 03.05.2023
+    Author       : TosoxDev
+    Last Edit    : 05.06.2023
     =====================================================================
 --]]
 
-local ini_eff = ini_file("items\\items\\animations_settings.ltx")
 local enable_ea = true
+
+local snd_jgut = sound_object("interface\\item_usage\\jgut_use")
 
 function on_option_change()
     enable_ea = avo_enhanced_animations_mcm.get_config("enable_ea")
@@ -22,13 +23,11 @@ function actor_on_item_use(obj)
     if not enable_ea then return end
 
     local obj_section = obj:section()
-	
+
     if obj_section == "survival_kit" then
         CreateTimeEvent("survival_kit_use", "survival_kit_use", 3.0, function()
-			game.stop_hud_motion()
-            enhanced_animations.used_item = "jgut"
-            enhanced_animations.anim_section = ini_eff:r_string_ex(enhanced_animations.used_item, "anm")
-            enhanced_animations.anim_prepare()
+            snd_jgut:play(db.actor, 0, sound_object.s2d)
+			game.play_hud_motion(2 , "item_jgut_hud", "anm_ea_show", false, 1)
             return true
         end)
     end
