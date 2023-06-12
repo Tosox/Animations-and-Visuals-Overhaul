@@ -53,7 +53,6 @@ It was programmed with maximum compatability with other addons in mind.
 
 - [ ] Ask authors for permission
 - [ ] Fix camera anim for "The Beak"
-- [x] Fix busyhands bug for "Survival Kit"
 
 ## Sources
 
