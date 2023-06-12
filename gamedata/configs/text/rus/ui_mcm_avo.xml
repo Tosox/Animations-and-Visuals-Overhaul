@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <string_table>
-	<string id="ui_mcm_menu_fdda_avo">
+	<string id="ui_mcm_menu_avo">
 		<text>AVO</text>
 	</string>
-	<string id="ui_mcm_fdda_avo_title">
+	<string id="ui_mcm_avo_title">
 		<text>Animations and Visuals Overhaul</text>
 	</string>
 	<string id="ui_mcm_avo_enable_ea">
