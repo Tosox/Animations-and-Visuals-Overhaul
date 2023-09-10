@@ -6,6 +6,7 @@
 It was programmed with maximum compatability with other addons in mind.
 
 ## Installation
+
 * Install the Modded Exes. You can get them from [here](https://github.com/themrdemonized/STALKER-Anomaly-modded-exes).
 * Install [Food, Drugs and Drink Animations](https://www.moddb.com/mods/stalker-anomaly/addons/food-drug-and-drinks-animations-reuploaded)
 * Install "Animations and Visuals Overhaul" preferably with [Mod Organizer](https://github.com/ModOrganizer2/modorganizer)
@@ -18,7 +19,8 @@ It was programmed with maximum compatability with other addons in mind.
 
 ## Changes
 
-### Added Animations for...
+### Added Animations for
+
 * Tourniquet
 * Survival Kit
 * Anabiotics
@@ -34,7 +36,8 @@ It was programmed with maximum compatability with other addons in mind.
 * Pack of old Meat
 * Exoskeleton Outfit
 
-### Modified Animations for...
+### Modified Animations for
+
 * Hercules
 * Morphine
 * Adrenalin
@@ -47,12 +50,13 @@ It was programmed with maximum compatability with other addons in mind.
 * Metal Bottle
 
 ### Other Changes
+
 * Fixed animations times
 
 ## TODO
 
-- [ ] Ask authors for permission
-- [ ] Fix camera anim for "The Beak"
+* [ ] Ask authors for permission
+* [ ] Fix camera anim for "The Beak"
 
 ## Sources
 
