@@ -1,4 +1,2 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-*.xml text encoding=cp1251
-*.ps text encoding=cp1251
