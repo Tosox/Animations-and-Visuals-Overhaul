@@ -32,6 +32,7 @@ It was programmed with maximum compatability with other addons in mind.
 * Beard's Tea
 * Mixed Nuts
 * Raisins
+* Smoked Salmon
 * Altoids
 * Pack of old Meat
 * Exoskeleton Outfit
