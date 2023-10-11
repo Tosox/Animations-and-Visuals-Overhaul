@@ -3,7 +3,7 @@
 ## Description
 
 "Animations and Visuals Overhaul" (AVO) is a collection of resources from various [addons](#sources) that aims to enhance and improve the item usage animations.
-It was programmed with maximum compatability with other addons in mind.
+It was programmed with maximum compatibility with other addons in mind.
 
 ## Installation
 
