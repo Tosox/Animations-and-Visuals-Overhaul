@@ -54,11 +54,6 @@ It was programmed with maximum compatibility with other addons in mind.
 
 * Fixed animations times
 
-## TODO
-
-* [ ] Ask authors for permission
-* [ ] Fix camera anim for "The Beak"
-
 ## Sources
 
 * [Food, Drug and Drinks Animations - Feel_Fried](https://www.moddb.com/mods/stalker-anomaly/addons/food-drug-and-drinks-animations-reuploaded)
