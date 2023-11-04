@@ -1,5 +1,13 @@
 # Credits
 
+* Teivazcz
+* Apathy_Knight
+* Skyww
+* Warhawk022
+* sticknou
+
+## Details
+
 ### Anabiotics
 * Animation: Teivazcz, GUNSLINGER Team
 * Sound: GUNSLINGER Team
