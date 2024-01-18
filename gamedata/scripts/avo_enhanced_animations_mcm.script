@@ -11,8 +11,8 @@ function on_mcm_load()
     return {
         id = "avo", sh = true, gr = {
             { id = "title", type = "slide", link = "ui_options_slider_mask", text = "ui_mcm_avo_title", size = { 512, 50 }, spacing = 20 },
-            { id = "enable_ea", type = "check", val = 1, def = true },
-            { id = "exo_anims", type = "check", val = 1, def = true }
+            { id = "enable_ea", type = "check", val = 1, def = defaults["enable_ea"] },
+            { id = "exo_anims", type = "check", val = 1, def = defaults["exo_anims"] }
         }
     }
 end
