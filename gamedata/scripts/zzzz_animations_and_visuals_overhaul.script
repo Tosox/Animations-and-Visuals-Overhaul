@@ -1,0 +1,63 @@
+--[[
+    =====================================================================
+    Addon        : Animations and Visuals Overhaul
+    Link         : https://github.com/TosoxDev/Animations-and-Visuals-Overhaul
+    Author       : Tosox
+	Date         : 16.04.2023
+    Last Edit    : 18.01.2024
+    =====================================================================
+--]]
+
+local ini_eff = ini_file("items\\items\\animations_settings.ltx")
+
+local exo_anims = nil
+
+--===========================================================================
+--
+-- Patch 'enhanced_animations' to dynamically change the animation
+--
+--===========================================================================
+
+local orig_anim_prepare = enhanced_animations.anim_prepare
+enhanced_animations.anim_prepare = function()
+	-- Check if MCM options are enabled
+    if not exo_anims then
+        orig_anim_prepare()
+        return
+    end
+
+    -- Check if actor has an outfit
+    local outfit = db.actor:item_in_slot(7)
+    if not outfit then
+        orig_anim_prepare()
+        return
+    end
+
+    -- Check if outfit is an exo
+    local hud = SYS_GetParam(0, outfit:section(), "player_hud_section", "")
+    if not hud:find("exo$") then
+        orig_anim_prepare()
+        return
+    end
+
+    -- Check if animation for the item exists as exo variant
+    local exo_item = enhanced_animations.used_item .. "_exo"
+    if not ini_eff:r_string_ex(exo_item, "snd") then
+        orig_anim_prepare()
+        return
+    end
+
+	enhanced_animations.used_item = exo_item
+	enhanced_animations.anim_section = ini_eff:r_string_ex(exo_item, "anm")
+	
+	orig_anim_prepare()
+end
+
+function on_option_change()
+    exo_anims = avo_enhanced_animations_mcm.get_config("exo_anims")
+end
+
+function on_game_start()
+    RegisterScriptCallback("on_option_change", on_option_change)
+    on_option_change()
+end
