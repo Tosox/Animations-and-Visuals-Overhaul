@@ -1,3 +1,13 @@
+--[[
+    =====================================================================
+    Addon        : Animations and Visuals Overhaul
+    Link         : https://github.com/TosoxDev/Animations-and-Visuals-Overhaul
+    Author       : Tosox
+	Date         : 05.02.2023
+    Last Edit    : 18.01.2024
+    =====================================================================
+--]]
+
 local defaults = {
     ["enable_ea"] = true,
     ["exo_anims"] = true
