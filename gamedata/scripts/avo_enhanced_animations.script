@@ -1,26 +1,21 @@
 --[[
     =====================================================================
     Addon        : Animations and Visuals Overhaul
-    Link:        : https://github.com/TosoxDev/Animations-and-Visuals-Overhaul
-    Author       : TosoxDev
-    Last Edit    : 05.06.2023
+    Link         : https://github.com/TosoxDev/Animations-and-Visuals-Overhaul
+    Author       : Tosox
+	Date         : 26.01.2023
+    Last Edit    : 18.01.2024
     =====================================================================
 --]]
 
-local enable_ea = true
+local enable_ea = nil
 
 local snd_jgut = sound_object("interface\\item_usage\\jgut_use")
 
-function on_option_change()
-    enable_ea = avo_enhanced_animations_mcm.get_config("enable_ea")
-end
-
-function actor_on_first_update()
-    on_option_change()
-end
-
 function actor_on_item_use(obj)
-    if not enable_ea then return end
+    if not enable_ea then
+        return
+    end
 
     local obj_section = obj:section()
 
@@ -33,8 +28,12 @@ function actor_on_item_use(obj)
     end
 end
 
+function on_option_change()
+    enable_ea = avo_enhanced_animations_mcm.get_config("enable_ea")
+end
+
 function on_game_start()
     RegisterScriptCallback("actor_on_item_use", actor_on_item_use)
     RegisterScriptCallback("on_option_change", on_option_change)
-    RegisterScriptCallback("actor_on_first_update", actor_on_first_update)
+    on_option_change()
 end
