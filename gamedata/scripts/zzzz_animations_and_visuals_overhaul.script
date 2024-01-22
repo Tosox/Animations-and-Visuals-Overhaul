@@ -4,17 +4,20 @@
     Link         : https://github.com/TosoxDev/Animations-and-Visuals-Overhaul
     Author       : Tosox
 	Date         : 16.04.2023
-    Last Edit    : 18.01.2024
+    Last Edit    : 22.01.2024
     =====================================================================
 --]]
 
 local ini_eff = ini_file("items\\items\\animations_settings.ltx")
 
+local enable_ea = nil
 local exo_anims = nil
+
+local follow_up_anims = {}
 
 --===========================================================================
 --
--- Patch 'enhanced_animations' to dynamically change the animation
+-- Patch 'enhanced_animations.anim_prepare' to dynamically change the animation
 --
 --===========================================================================
 
@@ -53,11 +56,55 @@ enhanced_animations.anim_prepare = function()
 	orig_anim_prepare()
 end
 
+--===========================================================================
+--
+-- Patch 'enhanced_animations.call_my_slot_back' to allow chained animations
+--
+--===========================================================================
+
+
+local orig_call_slot_back = enhanced_animations.call_my_slot_back
+enhanced_animations.call_my_slot_back = function()
+    orig_call_slot_back()
+
+    if #follow_up_anims > 0 then
+        enhanced_animations.used_item = follow_up_anims[1]
+	    enhanced_animations.anim_section = ini_eff:r_string_ex(follow_up_anims[1], "anm")
+        enhanced_animations.anim_prepare()
+        table.remove(follow_up_anims, 1)
+    end
+
+    return true
+end
+
+function register_follow_up_animation(obj_section)
+    if (not obj_section) or (not ini_eff:r_string_ex(obj_section, "snd")) then
+        printf("!ERROR: FDDA animation for '%s' does not exist", obj_section)
+    end
+    table.insert(follow_up_anims, obj_section)
+end
+
+function actor_on_item_use(obj)
+    if (not enable_ea) or (not obj) then
+        return
+    end
+
+    local obj_section = obj:section()
+
+    if obj_section == "survival_kit" then
+        register_follow_up_animation("jgut")
+    end
+end
+
+--===========================================================================
+
 function on_option_change()
     exo_anims = avo_enhanced_animations_mcm.get_config("exo_anims")
+    enable_ea = avo_enhanced_animations_mcm.get_config("enable_ea")
 end
 
 function on_game_start()
+    RegisterScriptCallback("actor_on_item_use", actor_on_item_use)
     RegisterScriptCallback("on_option_change", on_option_change)
     on_option_change()
 end
