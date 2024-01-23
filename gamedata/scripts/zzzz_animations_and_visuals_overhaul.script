@@ -79,6 +79,7 @@ end
 function register_follow_up_animation(obj_section)
     if (not obj_section) or (not ini_eff:r_string_ex(obj_section, "snd")) then
         printf("!ERROR: FDDA animation for '%s' does not exist", obj_section)
+        return
     end
     table.insert(follow_up_anims, obj_section)
 end
