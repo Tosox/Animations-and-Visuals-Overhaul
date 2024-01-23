@@ -4,7 +4,7 @@
     Link         : https://github.com/TosoxDev/Animations-and-Visuals-Overhaul
     Author       : Tosox
 	Date         : 16.04.2023
-    Last Edit    : 22.01.2024
+    Last Edit    : 23.01.2024
     =====================================================================
 --]]
 
@@ -62,7 +62,6 @@ end
 --
 --===========================================================================
 
-
 local orig_call_slot_back = enhanced_animations.call_my_slot_back
 enhanced_animations.call_my_slot_back = function()
     orig_call_slot_back()
@@ -80,6 +79,7 @@ end
 function register_follow_up_animation(obj_section)
     if (not obj_section) or (not ini_eff:r_string_ex(obj_section, "snd")) then
         printf("!ERROR: FDDA animation for '%s' does not exist", obj_section)
+        return
     end
     table.insert(follow_up_anims, obj_section)
 end
@@ -99,8 +99,8 @@ end
 --===========================================================================
 
 function on_option_change()
-    exo_anims = avo_enhanced_animations_mcm.get_config("exo_anims")
-    enable_ea = avo_enhanced_animations_mcm.get_config("enable_ea")
+    exo_anims = animations_and_visuals_overhaul_mcm.get_config("exo_anims")
+    enable_ea = animations_and_visuals_overhaul_mcm.get_config("enable_ea")
 end
 
 function on_game_start()

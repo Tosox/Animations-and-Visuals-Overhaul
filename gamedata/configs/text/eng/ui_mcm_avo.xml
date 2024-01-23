@@ -7,7 +7,7 @@
 		<text>Animations and Visuals Overhaul</text>
 	</string>
 	<string id="ui_mcm_avo_enable_ea">
-		<text>Enable enhanced animations</text>
+		<text>Enable chained animations</text>
 	</string>
 	<string id="ui_mcm_avo_enable_ea_desc">
 		<text>Enables playing more than one animation when using an item</text>
