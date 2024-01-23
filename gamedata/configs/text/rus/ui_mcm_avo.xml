@@ -7,7 +7,7 @@
 		<text>Animations and Visuals Overhaul</text>
 	</string>
 	<string id="ui_mcm_avo_enable_ea">
-		<text>¬ключить улучшенную анимацию</text>
+		<text>¬ключить цепочечную анимацию</text>
 	</string>
 	<string id="ui_mcm_avo_enable_ea_desc">
 		<text>¬ключает воспроизведение более одной анимации при использовании предмета</text>
