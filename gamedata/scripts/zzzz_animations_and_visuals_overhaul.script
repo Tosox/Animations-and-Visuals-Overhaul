@@ -62,7 +62,6 @@ end
 --
 --===========================================================================
 
-
 local orig_call_slot_back = enhanced_animations.call_my_slot_back
 enhanced_animations.call_my_slot_back = function()
     orig_call_slot_back()
