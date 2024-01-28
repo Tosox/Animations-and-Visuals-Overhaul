@@ -38,57 +38,18 @@ function get_current_anim_id(section)
 	return nil
 end
 
-function split_avo_anim_section(string)
-	-- Check if string starts with 'avo_'
-	local _, avo_prefix_idx = string.find(string, "^avo_")
-	if not avo_prefix_idx then
-		return nil
-	end
-
-	-- Remove 'avo_' prefix from the string
-	string = string.sub(string, avo_prefix_idx + 1, string.len(string))
-
-	-- Get the group
-	local _, group_idx = string.find(string, "_")
-	if not group_idx then
-		return nil
-	end
-
-	-- Extract and validate the group
-	group = string.sub(string, 1, group_idx - 1)
-
-	-- Remove the group from the string
-	string = string.sub(string, group_idx + 1, string.len(string))
-
-	-- Get the item section
-	local _, item_idx = string.find(string, "(.*)_")
-	if not item_idx then
-		return nil
-	end
-
-	-- Extract the item section
-	item = string.sub(string, 1, item_idx - 1)
-	
-	-- Remove the item section from the string
-	string = string.sub(string, item_idx + 1, string.len(string))
-
-	-- If the length of the string is zero no id was given
-	if string.len(string) == 0 then
-		return nil
-	end
-
-	-- The rest of the string is the id
-	id = string
-
-	return group, item, id
-end
-
 function collect_avo_anims()
 	local avo_anims = {}
 	ini_eff:section_for_each(function(section)
 		-- Check if section matches the pattern
-		local group, item, id = split_avo_anim_section(section)
-		if (not group) or (not item) or (not id) then
+		local item_sec, id = string.match(section, "^avo_(.+)_(.+)")
+		if (not item_sec) or (not id) then
+			return
+		end
+
+		local category = ini_eff:r_string_ex(section, "avo_category")
+		if not category then
+			-- TODO: Crash game
 			return
 		end
 		
@@ -98,37 +59,37 @@ function collect_avo_anims()
 			return
 		end
 		
-		-- Check if the item exists in-game
-		if not ini_sys:section_exist(item) then
+		-- Check if the section exists in-game
+		if not ini_sys:section_exist(item_sec) then
 			-- TODO: Crash game
 			return
 		end
 
-		-- Check if item already exists in a group
-		for group, items in pairs(avo_anims) do
-			for itm, ids in pairs(items) do
-				if itm == item then
+		-- Check if section already exists in a category
+		for category, items in pairs(avo_anims) do
+			for item, ids in pairs(items) do
+				if item == item_sec then
 					-- TODO: Crash game
 					return
 				end
 			end
 		end
 		
-		if not avo_anims[group] then
-			avo_anims[group] = {}
+		if not avo_anims[category] then
+			avo_anims[category] = {}
 		end
 			
-		if not avo_anims[group][item] then
-			avo_anims[group][item] = {}
+		if not avo_anims[category][item_sec] then
+			avo_anims[category][item_sec] = {}
 		end
 			
-		table.insert(avo_anims[group][item], id)
+		table.insert(avo_anims[category][item_sec], id)
 	end)
 	return avo_anims
 end
 
 function on_mcm_load()
-	-- Insert 'General' group
+	-- Insert 'General' category
 	local mcm_menu = {
 		id = "avo", gr = {
 			{
@@ -144,17 +105,17 @@ function on_mcm_load()
 	-- Collect all AVO animations defined in 'animations_settings.ltx'
 	_avo_anims = collect_avo_anims()
 	
-	for group, items in pairs(_avo_anims) do
-		-- Add slide for every group
-		local group_opt = {
-			id = group, sh = true, text = "ui_mcm_menu_avo_" .. group, gr = {
-				{ id = "title", type = "slide", link = "ui_options_slider_mask", text = "ui_mcm_avo_" .. group .. "_title", size = { 512, 50 }, spacing = 20 }
+	for category, items in pairs(_avo_anims) do
+		-- Add slide for every category
+		local category_opt = {
+			id = category, sh = true, text = "ui_mcm_menu_avo_" .. category, gr = {
+				{ id = "title", type = "slide", link = "ui_options_slider_mask", text = "ui_mcm_avo_" .. category .. "_title", size = { 512, 50 }, spacing = 20 }
 			}
 		}
 		
-		-- Add items of the group with a list widget
+		-- Add items of the category with a list widget
 		for item, ids in pairs(items) do
-			table.insert(group_opt.gr, {
+			table.insert(category_opt.gr, {
 				id = item, type = "list", val = 0, restart = false, content = {
 					function()
 						local list_content = {}
@@ -174,8 +135,8 @@ function on_mcm_load()
 			})
 		end
 		
-		-- Insert group menu into the MCM menu
-		table.insert(mcm_menu.gr, group_opt)
+		-- Insert category menu into the MCM menu
+		table.insert(mcm_menu.gr, category_opt)
 	end
 
 	return mcm_menu

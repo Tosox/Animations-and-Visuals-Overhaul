@@ -25,7 +25,12 @@ local orig_anim_prepare = enhanced_animations.anim_prepare
 enhanced_animations.anim_prepare = function()
 	local anim_id = animations_and_visuals_overhaul_mcm.get_current_anim_id(enhanced_animations.used_item)
 	if (anim_id) and (anim_id ~= "default") then
-		-- TODO: change animation
+		local anim_item = "avo_" .. enhanced_animations.used_item .. "_" .. anim_id
+		local item_anm = ini_eff:r_string_ex(anim_item, "anm")
+		if item_anm then
+			enhanced_animations.used_item = anim_item
+			enhanced_animations.anim_section = item_anm
+		end
 	end
 
 	-- Check if exo animations are enabled
@@ -38,9 +43,10 @@ enhanced_animations.anim_prepare = function()
 			if string.find(hud_section, "exo$") then
 				-- Check if animation for the item exists as exo variant
 				local exo_item = enhanced_animations.used_item .. "_exo"
-				if ini_eff:r_string_ex(exo_item, "snd") then
+				local exo_anm = ini_eff:r_string_ex(exo_item, "anm")
+				if exo_anm then
 					enhanced_animations.used_item = exo_item
-					enhanced_animations.anim_section = ini_eff:r_string_ex(exo_item, "anm")
+					enhanced_animations.anim_section = exo_anm
 				end
 			end
 		end
