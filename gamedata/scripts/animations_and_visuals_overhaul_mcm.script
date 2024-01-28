@@ -4,7 +4,7 @@
 	Link         : https://github.com/TosoxDev/Animations-and-Visuals-Overhaul
 	Author       : Tosox
 	Date         : 05.02.2023
-	Last Edit    : 25.01.2024
+	Last Edit    : 28.01.2024
 	=====================================================================
 --]]
 
@@ -19,6 +19,23 @@ _avo_anims = {}
 
 function get_config(module, key)
 	if ui_mcm then return ui_mcm.get("avo/" .. module .. "/" .. key) else return defaults[module .. "/" .. key] end
+end
+
+function get_current_anim_id(section)
+	if ui_mcm then
+		for group, items in pairs(_avo_anims) do
+			for item, _ in pairs(items) do
+				if section == item then
+					return ui_mcm.get("avo/" .. group .. "/" .. section)
+				end
+			end
+		end
+	else
+		-- TODO: implement defaults for non MCM users
+		return nil
+	end
+
+	return nil
 end
 
 function split_avo_anim_section(string)
@@ -39,9 +56,6 @@ function split_avo_anim_section(string)
 
 	-- Extract and validate the group
 	group = string.sub(string, 1, group_idx - 1)
-	if (group ~= "food") and (group ~= "drink") and (group ~= "drug") and (group ~= "medical") then
-		return nil
-	end
 
 	-- Remove the group from the string
 	string = string.sub(string, group_idx + 1, string.len(string))
@@ -80,12 +94,24 @@ function collect_avo_anims()
 		
 		-- 'default' is reserved for the original FDDA animation
 		if id == "default" then
+			-- TODO: Crash game
 			return
 		end
 		
 		-- Check if the item exists in-game
 		if not ini_sys:section_exist(item) then
+			-- TODO: Crash game
 			return
+		end
+
+		-- Check if item already exists in a group
+		for group, items in pairs(avo_anims) do
+			for itm, ids in pairs(items) do
+				if itm == item then
+					-- TODO: Crash game
+					return
+				end
+			end
 		end
 		
 		if not avo_anims[group] then
@@ -106,8 +132,8 @@ function on_mcm_load()
 	local mcm_menu = {
 		id = "avo", gr = {
 			{
-				id = "general", sh = true, gr = {
-					{ id = "title", type = "slide", link = "ui_options_slider_mask", text = "ui_mcm_avo_title_general", size = { 512, 50 }, spacing = 20 },
+				id = "general", sh = true, text = "ui_mcm_menu_avo_general", gr = {
+					{ id = "title", type = "slide", link = "ui_options_slider_mask", text = "ui_mcm_avo_general_title", size = { 512, 50 }, spacing = 20 },
 					{ id = "enable_ea", type = "check", val = 1, def = defaults["general/enable_ea"] },
 					{ id = "exo_anims", type = "check", val = 1, def = defaults["general/exo_anims"] }
 				}
@@ -121,24 +147,24 @@ function on_mcm_load()
 	for group, items in pairs(_avo_anims) do
 		-- Add slide for every group
 		local group_opt = {
-			id = group, sh = true, gr = {
-				{ id = "title", type = "slide", link = "ui_options_slider_mask", text = "ui_mcm_avo_title_" .. group, size = { 512, 50 }, spacing = 20 }
+			id = group, sh = true, text = "ui_mcm_menu_avo_" .. group, gr = {
+				{ id = "title", type = "slide", link = "ui_options_slider_mask", text = "ui_mcm_avo_" .. group .. "_title", size = { 512, 50 }, spacing = 20 }
 			}
 		}
 		
 		-- Add items of the group with a list widget
 		for item, ids in pairs(items) do
 			table.insert(group_opt.gr, {
-				id = item, type = "list", val = 0, restart = false, text = item, content = {
+				id = item, type = "list", val = 0, restart = false, content = {
 					function()
 						local list_content = {}
 						
 						-- Insert FDDA default option for the item
-						table.insert(list_content, { "default", game.translate_string("default") })
+						table.insert(list_content, { "default", game.translate_string("avo_default") })
 						
 						-- Insert available animation ids for the item
 						for _, id in ipairs(ids) do
-							table.insert(list_content, { id, game.translate_string(id) })
+							table.insert(list_content, { id, game.translate_string("avo_" .. id) })
 						end
 						
 						-- Return list of available animations

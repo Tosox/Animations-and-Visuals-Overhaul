@@ -4,7 +4,7 @@
 	Link         : https://github.com/TosoxDev/Animations-and-Visuals-Overhaul
 	Author       : Tosox
 	Date         : 16.04.2023
-	Last Edit    : 25.01.2024
+	Last Edit    : 28.01.2024
 	=====================================================================
 --]]
 
@@ -23,6 +23,11 @@ follow_up_anims = {}
 
 local orig_anim_prepare = enhanced_animations.anim_prepare
 enhanced_animations.anim_prepare = function()
+	local anim_id = animations_and_visuals_overhaul_mcm.get_current_anim_id(enhanced_animations.used_item)
+	if (anim_id) and (anim_id ~= "default") then
+		-- TODO: change animation
+	end
+
 	-- Check if exo animations are enabled
 	if exo_anims then
 		-- Check if actor has an outfit
@@ -66,7 +71,7 @@ end
 
 function register_follow_up_animation(obj_section)
 	if (not obj_section) or (not ini_eff:r_string_ex(obj_section, "snd")) then
-		printf("!ERROR: FDDA animation for '%s' does not exist", obj_section)
+		printf("![AVO] ERROR: FDDA animation for '%s' does not exist", obj_section)
 		return
 	end
 	table.insert(follow_up_anims, obj_section)
@@ -87,8 +92,8 @@ end
 --===========================================================================
 
 function on_option_change()
-	exo_anims = animations_and_visuals_overhaul_mcm.get_config("exo_anims")
-	enable_ea = animations_and_visuals_overhaul_mcm.get_config("enable_ea")
+	exo_anims = animations_and_visuals_overhaul_mcm.get_config("general", "exo_anims")
+	enable_ea = animations_and_visuals_overhaul_mcm.get_config("general", "enable_ea")
 end
 
 function on_game_start()
