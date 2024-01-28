@@ -8,9 +8,8 @@ ui_mcm.UIMCM.Register_List = function(self, xml, handler, path, opt, v, flags)
 
 	local id = string.gsub(ui_mcm.cc(path , opt), _opt_, "_")
 
-	if v.text then
-		local inv_name = ini_sys:r_string_ex(v.text, "inv_name") or v.text
-		self._Cap[id]:TextControl():SetText(game.translate_string(inv_name))
+	if v.unprefixed_text then
+		self._Cap[id]:TextControl():SetText(game.translate_string(v.unprefixed_text))
 	end
 
 	return self._Cap[id]:GetHeight()

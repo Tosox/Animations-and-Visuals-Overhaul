@@ -115,8 +115,9 @@ function on_mcm_load()
 		
 		-- Add items of the category with a list widget
 		for item, ids in pairs(items) do
+			local inv_name = ini_sys:r_string_ex(item, "inv_name") or item
 			table.insert(category_opt.gr, {
-				id = item, type = "list", val = 0, restart = false, text = item, content = {
+				id = item, type = "list", val = 0, restart = false, unprefixed_text = inv_name, content = {
 					function()
 						local list_content = {}
 						
