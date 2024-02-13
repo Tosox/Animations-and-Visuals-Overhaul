@@ -51,8 +51,24 @@ enhanced_animations.anim_prepare = function()
 			end
 		end
 	end
+
+	-- Register followup animation
+	local chained_list = ini_eff:r_list(enhanced_animations.used_item, "avo_chained")
+	if chained_list then
+		for _, anim_section in pairs(chained_list) do
+			register_follow_up_animation(anim_section)
+		end
+	end
 	
 	orig_enhanced_animations_anim_prepare()
+end
+
+function register_follow_up_animation(obj_section)
+	if (not obj_section) or (not ini_eff:r_string_ex(obj_section, "snd")) then
+		printf("![AVO] ERROR: FDDA animation for '%s' does not exist", obj_section)
+		return
+	end
+	table.insert(follow_up_anims, obj_section)
 end
 
 --===========================================================================
@@ -73,26 +89,6 @@ enhanced_animations.call_my_slot_back = function()
 	end
 
 	return true
-end
-
-function register_follow_up_animation(obj_section)
-	if (not obj_section) or (not ini_eff:r_string_ex(obj_section, "snd")) then
-		printf("![AVO] ERROR: FDDA animation for '%s' does not exist", obj_section)
-		return
-	end
-	table.insert(follow_up_anims, obj_section)
-end
-
-function actor_on_item_use(obj)
-	if (not enable_ea) or (not obj) then
-		return
-	end
-
-	local obj_section = obj:section()
-
-	if obj_section == "survival_kit" then
-		register_follow_up_animation("jgut")
-	end
 end
 
 --===========================================================================
@@ -127,7 +123,6 @@ function on_option_change()
 end
 
 function on_game_start()
-	RegisterScriptCallback("actor_on_item_use", actor_on_item_use)
 	RegisterScriptCallback("on_option_change", on_option_change)
 	on_option_change()
 end
