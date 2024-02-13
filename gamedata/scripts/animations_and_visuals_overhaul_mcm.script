@@ -30,12 +30,9 @@ function get_current_anim_id(section)
 				end
 			end
 		end
-	else
-		-- TODO: implement defaults for non MCM users
-		return nil
 	end
 
-	return nil
+	return "default"
 end
 
 function collect_avo_anims()
@@ -117,7 +114,7 @@ function on_mcm_load()
 		for item, ids in pairs(items) do
 			local inv_name = ini_sys:r_string_ex(item, "inv_name") or item
 			table.insert(category_opt.gr, {
-				id = item, type = "list", val = 0, restart = false, unprefixed_text = inv_name, content = {
+				id = item, type = "list", val = 0, restart = false, unprefixed_text = inv_name, def = "ui_mcm_lst_avo_default", content = {
 					function()
 						local list_content = {}
 						
