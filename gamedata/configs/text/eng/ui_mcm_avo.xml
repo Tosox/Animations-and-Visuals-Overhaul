@@ -3,19 +3,50 @@
 	<string id="ui_mcm_menu_avo">
 		<text>AVO</text>
 	</string>
-	<string id="ui_mcm_avo_title">
-		<text>Animations and Visuals Overhaul</text>
+	<string id="ui_mcm_menu_avo_general">
+		<text>General</text>
 	</string>
-	<string id="ui_mcm_avo_enable_ea">
+	<string id="ui_mcm_avo_general_title">
+		<text>General Settings</text>
+	</string>
+	<string id="ui_mcm_avo_general_enable_ea">
 		<text>Enable chained animations</text>
 	</string>
-	<string id="ui_mcm_avo_enable_ea_desc">
+	<string id="ui_mcm_avo_general_enable_ea_desc">
 		<text>Enables playing more than one animation when using an item</text>
 	</string>
-	<string id="ui_mcm_avo_exo_anims">
+	<string id="ui_mcm_avo_general_exo_anims">
 		<text>Enable exo animations</text>
 	</string>
-	<string id="ui_mcm_avo_exo_anims_desc">
+	<string id="ui_mcm_avo_general_exo_anims_desc">
 		<text>Enables exo animations for medkits and antirads</text>
+	</string>
+
+	<string id="ui_mcm_menu_avo_medicals">
+		<text>Medicals</text>
+	</string>
+	<string id="ui_mcm_avo_medicals_title">
+		<text>Medicals</text>
+	</string>
+
+	<string id="ui_mcm_menu_avo_drinks">
+		<text>Drinks</text>
+	</string>
+	<string id="ui_mcm_avo_drinks_title">
+		<text>Drinks</text>
+	</string>
+
+	<string id="ui_mcm_menu_avo_foods">
+		<text>Foods</text>
+	</string>
+	<string id="ui_mcm_avo_foods_title">
+		<text>Foods</text>
+	</string>
+
+	<string id="ui_mcm_menu_avo_drugs">
+		<text>Drugs</text>
+	</string>
+	<string id="ui_mcm_avo_drugs_title">
+		<text>Drugs</text>
 	</string>
 </string_table>

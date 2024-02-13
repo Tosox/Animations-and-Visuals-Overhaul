@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<string_table>
+	<string id="ui_mcm_lst_avo_default">
+		<text>Vanilla FDDA</text>
+	</string>
+    <string id="ui_mcm_lst_avo_tosox">
+		<text>Tosox' edited</text>
+	</string>
+    <string id="ui_mcm_lst_avo_gunsl">
+		<text>Gunslinger</text>
+	</string>
+    <string id="ui_mcm_lst_avo_gunsl">
+		<text>Apathy_Knight</text>
+	</string>
+    <string id="ui_mcm_lst_avo_newcoffee">
+		<text>New Coffee</text>
+	</string>
+    <string id="ui_mcm_lst_avo_fddacomplements">
+		<text>FDDA Complements</text>
+	</string>
+    <string id="ui_mcm_lst_avo_skyww">
+		<text>Skyww</text>
+	</string>
+</string_table>

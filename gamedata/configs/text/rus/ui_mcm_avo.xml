@@ -3,19 +3,50 @@
 	<string id="ui_mcm_menu_avo">
 		<text>AVO</text>
 	</string>
-	<string id="ui_mcm_avo_title">
-		<text>Animations and Visuals Overhaul</text>
+	<string id="ui_mcm_menu_avo_general">
+		<text>Общие</text>
 	</string>
-	<string id="ui_mcm_avo_enable_ea">
-		<text>Включить цепочечную анимацию</text>
+	<string id="ui_mcm_avo_general_title">
+		<text>Общие настройки</text>
 	</string>
-	<string id="ui_mcm_avo_enable_ea_desc">
-		<text>Включает воспроизведение более одной анимации при использовании предмета</text>
+	<string id="ui_mcm_avo_general_enable_ea">
+		<text>Включить цепочку анимаций</text>
 	</string>
-	<string id="ui_mcm_avo_exo_anims">
-		<text>Включить анимация экзо-скелета</text>
+	<string id="ui_mcm_avo_general_enable_ea_desc">
+		<text>Позволяет воспроизводить более одной анимации при использовании предмета</text>
 	</string>
-	<string id="ui_mcm_avo_exo_anims_desc">
-		<text>Включает экзо-анимацию для аптечек и антирадов</text>
+	<string id="ui_mcm_avo_general_exo_anims">
+		<text>Включить экзо-анимации</text>
+	</string>
+	<string id="ui_mcm_avo_general_exo_anims_desc">
+		<text>Позволяет включить экзо-анимации для медицинских аптечек и антирадов</text>
+	</string>
+
+	<string id="ui_mcm_menu_avo_medicals">
+		<text>Медицинские</text>
+	</string>
+	<string id="ui_mcm_avo_medicals_title">
+		<text>Медицинские</text>
+	</string>
+
+	<string id="ui_mcm_menu_avo_drinks">
+		<text>Напитки</text>
+	</string>
+	<string id="ui_mcm_avo_drinks_title">
+		<text>Напитки</text>
+	</string>
+
+	<string id="ui_mcm_menu_avo_foods">
+		<text>Еда</text>
+	</string>
+	<string id="ui_mcm_avo_foods_title">
+		<text>Еда</text>
+	</string>
+
+	<string id="ui_mcm_menu_avo_drugs">
+		<text>Препараты</text>
+	</string>
+	<string id="ui_mcm_avo_drugs_title">
+		<text>Препараты</text>
 	</string>
 </string_table>
