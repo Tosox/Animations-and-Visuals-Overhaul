@@ -17,43 +17,6 @@ It was programmed with maximum compatibility with other addons in mind.
   * [Water Flask Rework - Apathy_Knight](https://www.moddb.com/mods/stalker-anomaly/addons/water-flask-rework)
 * Optional: [Cr3pis Icon Pack](https://www.moddb.com/mods/stalker-anomaly/addons/cr3pis-icon-pack)
 
-## Changes
-
-### Added Animations for
-
-* Tourniquet
-* Survival Kit
-* Anabiotics
-* Cuban Cigar
-* Hand Rolling Tobacco
-* Russian Tobacco
-* Cannabis Joint
-* The Beak
-* Beard's Tea
-* Mixed Nuts
-* Raisins
-* Smoked Salmon
-* Altoids
-* Pack of old Meat
-* Exoskeleton Outfit
-
-### Modified Animations for
-
-* Hercules
-* Morphine
-* Adrenalin
-* Chlortetracycline
-* Tetanus Vaccine
-* Diclofenac Sodium
-* Mineral Water
-* Sparkling Water
-* Purified Water
-* Metal Bottle
-
-### Other Changes
-
-* Fixed animations times
-
 ## Sources
 
 * [Food, Drug and Drinks Animations - Feel_Fried](https://www.moddb.com/mods/stalker-anomaly/addons/food-drug-and-drinks-animations-reuploaded)
